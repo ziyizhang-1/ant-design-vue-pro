@@ -267,8 +267,35 @@ export const asyncRouterMap = [
             ]
           }
         ]
+      },
+      // content-manager
+      {
+        path: '/content-manager',
+        name: 'ContentManager',
+        component: RouteView,
+        redirect: '/content-manager/text-editor',
+        meta: { title: 'menu.content-manager', icon: 'tool', permission: ['exception'] },
+        children: [
+          {
+            path: '/content-manager/text-editor',
+            name: 'TextEditor',
+            component: () => import('@/views/content-manager/Editor'),
+            meta: { title: 'menu.content-manager.text-editor', permission: ['exception'] }
+          },
+          {
+            path: '/content-manager/lobby',
+            name: 'Lobby',
+            component: () => import(/* webpackChunkName: "fail" */ '@/views/exception/404'),
+            meta: { title: 'menu.content-manager.lobby', permission: ['exception'] }
+          },
+          {
+            path: '/content-manager/requests',
+            name: 'Requests',
+            component: () => import(/* webpackChunkName: "fail" */ '@/views/exception/404'),
+            meta: { title: 'menu.content-manager.requests', permission: ['exception'] }
+          }
+        ]
       }
-
       // other
       /*
       {

@@ -35,5 +35,9 @@ export default {
     'menu.account.center': '个人中心',
     'menu.account.settings': '个人设置',
     'menu.account.trigger': '触发报错',
-    'menu.account.logout': '退出登录'
+    'menu.account.logout': '退出登录',
+    'menu.content-manager': '内容管理',
+    'menu.content-manager.text-editor': '编辑文本',
+    'menu.content-manager.lobby': '展示中心',
+    'menu.content-manager.requests': '审批申请'
 }
